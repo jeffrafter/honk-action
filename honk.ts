@@ -32,7 +32,7 @@ const run = async (): Promise<void> => {
       owner,
       repo,
       issue_number: issue.number,
-      body: '# Honk!',
+      body: '![honk](https://user-images.githubusercontent.com/4064/65900857-cf462f80-e36b-11e9-9a9c-76170c99618b.png)',
     })
     console.log(`Honk! ${issueCommentResponse.data.url}`)
   } catch (error) {

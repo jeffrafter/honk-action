@@ -1,4 +1,8 @@
+![sign](https://user-images.githubusercontent.com/4064/65901304-c86bec80-e36c-11e9-9d96-807cb6fb6bb0.png)
+
 A bot which requires all comments to be 'Honk' or it deletes them
+
+![honk](https://user-images.githubusercontent.com/4064/65900857-cf462f80-e36b-11e9-9a9c-76170c99618b.png)
 
 To use this bot add the following workflow to your repo at `.github/workflows/honk.yml`:
 
@@ -55,3 +59,9 @@ git push origin v1
 ```
 
 Once complete you'll likely want to remove the production node modules and reinstall the dev dependencies.
+
+# Credits
+
+Inspired by [Untitled Goose Game](https://goose.game/) and the Discord bot by [@melissamcewen](https://twitter.com/melissamcewen/status/1176980019811405824)
+
+Note: not associated/affiliated with Unititled Goose Game in any way.
