@@ -1,4 +1,4 @@
-![sign](https://user-images.githubusercontent.com/4064/65901304-c86bec80-e36c-11e9-9d96-807cb6fb6bb0.png)
+![sign](https://user-images.githubusercontent.com/4064/65901610-665fb700-e36d-11e9-9659-c65e623565cb.png)
 
 A bot which requires all comments to be 'Honk' or it deletes them
 
