@@ -1,0 +1,6 @@
+name: honk
+description: "Checks to see if a comment contains 'Honk', otherwise deletes it"
+author: "@jeffrafter"
+runs:
+  using: "node12"
+  main: "./honk.js"

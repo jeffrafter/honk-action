@@ -1,0 +1,42 @@
+{
+  "name": "honk-action",
+  "version": "1.0.0",
+  "description": "A bot which requires all comments to be 'Honk' or it deletes them",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeffrafter/honk-action.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jeffrafter/honk-action/issues"
+  },
+  "homepage": "https://github.com/jeffrafter/honk-action#readme",
+  "scripts": {
+    "build": "tsc",
+    "test": "tsc --noEmit && jest",
+    "lint": "eslint . --ext .ts"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.1.1",
+    "@types/jest": "^24.0.18",
+    "@types/nock": "^11.1.0",
+    "@types/node": "^12.7.5",
+    "@typescript-eslint/eslint-plugin": "^2.2.0",
+    "@typescript-eslint/parser": "^2.2.0",
+    "eslint": "^6.3.0",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "jest": "^24.9.0",
+    "nock": "^11.3.4",
+    "prettier": "^1.18.2",
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.6.3"
+  },
+  "dependencies": {
+    "@actions/core": "^1.1.0",
+    "@actions/github": "^1.1.0",
+    "glob": "^7.1.4"
+  }
+}
