@@ -24,7 +24,7 @@ const run = async (): Promise<void> => {
       repo,
       comment_id: comment.id,
     })
-    console.log(`Deleted comment! ${JSON.stringify(deleteCommentResponse.data)}`)
+    console.log(`Deleted comment! ${JSON.stringify(deleteCommentResponse.status)}`)
 
     // Add a new comment that says honk
     // https://octokit.github.io/rest.js/#octokit-routes-issues-create-comment
