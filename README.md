@@ -22,6 +22,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
+To see this in use, checkout [honk-test](https://github.com/jeffrafter/honk-test/issues).
+
 ## Development
 
 Clone this repo. Then run tests:
