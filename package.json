@@ -6,7 +6,12 @@
     "type": "git",
     "url": "git+https://github.com/jeffrafter/honk-action.git"
   },
-  "keywords": [],
+  "keywords": [
+    "honk",
+    "goose",
+    "github",
+    "action"
+  ],
   "author": "",
   "license": "MIT",
   "bugs": {
