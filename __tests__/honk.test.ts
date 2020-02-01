@@ -27,9 +27,7 @@ beforeEach(() => {
 
 describe('honk action', () => {
   it('runs', async () => {
-    expect(async () => {
-      await run()
-    }).not.toThrow()
+    await expect(run()).resolves.not.toThrow()
   })
 
   it('deletes the comment and adds a comment', async () => {
@@ -43,14 +41,15 @@ describe('honk action', () => {
     // Honk
     nock('https://api.github.com')
       .post(`/repos/example/repository/issues/1/comments`, body => {
-        return body.body === '![honk](https://user-images.githubusercontent.com/4064/65900857-cf462f80-e36b-11e9-9a9c-76170c99618b.png)'
+        return (
+          body.body ===
+          '![honk](https://user-images.githubusercontent.com/4064/65900857-cf462f80-e36b-11e9-9a9c-76170c99618b.png)'
+        )
       })
       .reply(200, {
         url: 'https://github.com/#example',
       })
 
     await run()
-
-    expect(1).toEqual(1)
   })
 })
