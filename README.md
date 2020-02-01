@@ -44,23 +44,20 @@ If you want to release a new version first checkout or create the release branch
 git checkout releases/v1
 ```
 
-Then build the distribution (requires compiling the TypeScript), drop the node modules and reinstall only the production node modules, commit and push the tag:
+Then create the release:
 
 ```bash
-npm install
+git reset --hard master
+npm test
+npm run lint
 npm run build
-rm -rf node_modules
-sed -i '' '/node_modules/d' .gitignore
-npm install --production
 git add .
-git commit -m "V1"
+git commit -m "v1"
 git push origin releases/v1
 git push origin :refs/tags/v1
-git tag -fa v1 -m "V1"
+git tag -fa v1 -m "v1"
 git push origin v1
 ```
-
-Once complete you'll likely want to remove the production node modules and reinstall the dev dependencies.
 
 # Credits
 
