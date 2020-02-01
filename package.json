@@ -14,7 +14,7 @@
   },
   "homepage": "https://github.com/jeffrafter/honk-action#readme",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc --noEmit && ncc build honk.ts -o dist -m",
     "test": "tsc --noEmit && jest",
     "lint": "eslint . --ext .ts"
   },
