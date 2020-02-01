@@ -1,13 +1,17 @@
 import * as github from '@actions/github'
+import * as core from '@actions/core'
 import {WebhookPayload} from '@actions/github/lib/interfaces'
 import nock from 'nock'
 import run from '../honk'
 
 beforeEach(() => {
   jest.resetModules()
+  jest.spyOn(core, 'getInput').mockImplementation((name: string): string => {
+    if (name === 'token') return '12345'
+    return ''
+  })
 
   process.env['GITHUB_REPOSITORY'] = 'example/repository'
-  process.env['GITHUB_TOKEN'] = '12345'
 
   // https://developer.github.com/v3/activity/events/types/#issuecommentevent
   github.context.payload = {
@@ -23,6 +27,12 @@ beforeEach(() => {
       body: 'Honk',
     },
   } as WebhookPayload
+})
+
+afterEach(() => {
+  expect(nock.pendingMocks()).toEqual([])
+  nock.isDone()
+  nock.cleanAll()
 })
 
 describe('honk action', () => {

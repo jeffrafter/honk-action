@@ -3,8 +3,8 @@ import * as github from '@actions/github'
 
 const run = async (): Promise<void> => {
   try {
-    const token = process.env['HONK_USER_TOKEN'] || process.env['GITHUB_TOKEN']
-    if (!token) return
+    const token = process.env['HONK_USER_TOKEN'] || process.env['GITHUB_TOKEN'] || core.getInput('token')
+    if (!token || token === '') return
 
     // Create the octokit client
     const octokit: github.GitHub = new github.GitHub(token)

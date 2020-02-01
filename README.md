@@ -18,8 +18,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: jeffrafter/honk-action@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
 To see this in use, checkout [honk-test](https://github.com/jeffrafter/honk-test/issues).

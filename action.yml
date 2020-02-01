@@ -1,6 +1,15 @@
 name: honk
 description: "Checks to see if a comment contains 'Honk', otherwise deletes it"
 author: "@jeffrafter"
+inputs:
+  token:
+    description: >
+      GitHub token used to create and remove comments. By default, this uses the
+      repository token provided by GitHub Actions. You can customize the user by
+      replacing this token with a user token which has write-access to your
+      repository. Note that the token will be accessible to all repository
+      collaborators.
+    default: ${{ github.token }}
 runs:
   using: "node12"
-  main: "./honk.js"
+  main: "./dist/index.js"
